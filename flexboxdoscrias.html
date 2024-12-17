@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de CSS Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .container {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo CSS Flexbox</h1>
+    <p>O <strong>Flexbox</strong> é um modelo de layout no CSS que permite criar layouts dinâmicos e flexíveis com facilidade. Ele organiza elementos em contêineres flexíveis, ajustando o espaço e o alinhamento de acordo com o design desejado.</p>
+
+    <h2>Como ativar o Flexbox?</h2>
+    <p>Para usar Flexbox, basta aplicar <code>display: flex;</code> ao contêiner pai. Veja um exemplo básico:</p>
+    <pre>
+.container {
+    display: flex;
+}
+    </pre>
+
+    <h2>Propriedades principais do Flexbox</h2>
+    <p>O Flexbox tem propriedades para o contêiner pai e os itens filhos. Aqui estão as principais:</p>
+
+    <h3>1. Propriedades do contêiner:</h3>
+    <ul>
+        <li><strong>flex-direction</strong>: Define a direção dos itens (linha ou coluna). Exemplos: <code>row</code>, <code>column</code>.</li>
+        <li><strong>justify-content</strong>: Alinha itens no eixo principal. Exemplos: <code>flex-start</code>, <code>center</code>, <code>space-between</code>.</li>
+        <li><strong>align-items</strong>: Alinha itens no eixo transversal. Exemplos: <code>flex-start</code>, <code>center</code>, <code>stretch</code>.</li>
+    </ul>
+
+    <h3>2. Propriedades dos itens filhos:</h3>
+    <ul>
+        <li><strong>flex-grow</strong>: Define o quanto um item pode crescer em relação aos outros.</li>
+        <li><strong>flex-shrink</strong>: Define o quanto um item pode encolher se o espaço for limitado.</li>
+        <li><strong>flex-basis</strong>: Define o tamanho inicial de um item antes de distribuir o espaço.</li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+    <p>Veja como essas propriedades funcionam em um exemplo:</p>
+    <h3>Exemplo 1: Direção dos itens (<code>flex-direction</code>)</h3>
+    <div class="container" style="flex-direction: row;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <pre>
+.container {
+    display: flex;
+    flex-direction: row; /* ou column */
+}
+    </pre>
+
+    <h3>Exemplo 2: Alinhamento no eixo principal (<code>justify-content</code>)</h3>
+    <div class="container" style="justify-content: center;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <pre>
+.container {
+    display: flex;
+    justify-content: center; /* ou space-between, space-around, etc. */
+}
+    </pre>
+
+    <h3>Exemplo 3: Alinhamento no eixo transversal (<code>align-items</code>)</h3>
+    <div class="container" style="align-items: center; height: 200px;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <pre>
+.container {
+    display: flex;
+    align-items: center; /* ou flex-start, stretch, etc. */
+}
+    </pre>
+
+    <h3>Exemplo 4: Crescimento dos itens (<code>flex-grow</code>)</h3>
+    <div class="container">
+        <div class="box" style="flex-grow: 1;">1</div>
+        <div class="box" style="flex-grow: 2;">2</div>
+        <div class="box" style="flex-grow: 1;">3</div>
+    </div>
+    <pre>
+.item {
+    flex-grow: 1; /* Ajusta o quanto o item cresce */
+}
+    </pre>
+
+    <h2>Resumo</h2>
+    <p>O Flexbox é uma ferramenta poderosa e versátil para criar layouts responsivos e bem organizados. Experimente os exemplos acima para entender como cada propriedade afeta o design!</p>
+</body>
+</html>

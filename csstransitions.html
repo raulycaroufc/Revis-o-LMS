@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2D Transforms: Guia Passo a Passo</title>
+    <style>
+        /* Estilo básico para o site */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f0f8f5;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2a7a4e;
+        }
+
+        .container {
+            margin: 30px 0;
+            padding: 50px;
+        }
+
+        .example {
+            margin: 10px 0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #aad1c4;
+            background-color: #e7f5ee;
+            transition: transform 0.5s ease;
+        }
+
+        .example:hover {
+            cursor: pointer;
+        }
+
+        /* Transformações aplicadas em cada exemplo */
+        .rotate:hover {
+            transform: rotate(45deg); /* Gira em 45 graus */
+        }
+
+        .scale:hover {
+            transform: scale(1.5); /* Aumenta 1.5 vezes */
+        }
+
+        .translate:hover {
+            transform: translate(50px, 20px); /* Move 50px para a direita e 20px para baixo */
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg); /* Inclina no eixo X e Y */
+        }
+
+        .matrix:hover {
+            transform: matrix(1, 0.5, -0.5, 1, 30, 20); /* Combina transformações */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Guia Simples: CSS 2D Transforms</h1>
+    <!-- Explicações organizadas em seções -->
+    <div class="container">
+        <h2>1. Rotate (Rotação)</h2>
+        <p><strong>O que é?</strong> Rotaciona o elemento em graus, no sentido horário ou anti-horário.</p>
+        <p><strong>Exemplo:</strong> Passe o mouse no quadrado abaixo para ver ele girar.</p>
+        <div class="example rotate">Clique ou passe o mouse para girar!</div>
+        <div class="example rotate">Clique aqui dnv</div>
+    </div>
+
+    <div class="container">
+        <h2>2. Scale (Escala)</h2>
+        <p><strong>O que é?</strong> Redimensiona o elemento, aumentando ou diminuindo o tamanho.</p>
+        <p><strong>Exemplo:</strong> Passe o mouse no quadrado abaixo para ele ficar maior.</p>
+        <div class="example scale">Clique ou passe o mouse para redimensionar!</div>
+    </div>
+
+    <div class="container">
+        <h2>3. Translate (Translação)</h2>
+        <p><strong>O que é?</strong> Move o elemento em direção horizontal (X) e vertical (Y).</p>
+        <p><strong>Exemplo:</strong> Passe o mouse no quadrado abaixo para ele se mover.</p>
+        <div class="example translate">Clique ou passe o mouse para mover!</div>
+    </div>
+
+    <div class="container">
+        <h2>4. Skew (Inclinação)</h2>
+        <p><strong>O que é?</strong> Distorce o elemento ao longo dos eixos X e Y.</p>
+        <p><strong>Exemplo:</strong> Passe o mouse no quadrado abaixo para ele inclinar.</p>
+        <div class="example skew">Clique ou passe o mouse para inclinar!</div>
+    </div>
+
+    <div class="container">
+        <h2>5. Matrix (Matriz)</h2>
+        <p><strong>O que é?</strong> Combina múltiplas transformações (escala, rotação, inclinação e translação).</p>
+        <p><strong>Exemplo:</strong> Passe o mouse no quadrado abaixo para aplicar uma matriz.</p>
+        <div class="example matrix">Clique ou passe o mouse para transformar!</div>
+    </div>
+</body>
+</html>
