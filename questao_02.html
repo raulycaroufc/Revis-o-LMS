@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: lighter;
+        }
+
+        nav.barra {
+            width: 20vw;
+            height: 100vh; /* Mantém 100% da altura da viewport */
+            position: fixed;
+            background-color: #dfdfdf;
+        }
+
+        ul {
+            list-style-type: none;  
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        li {
+            position: relative; /* Necessário para posicionar o dropdown corretamente */
+        }
+
+        li a { /* Configuração dos links dentro da lista */
+            display: block; 
+            padding: 15px; 
+            text-align: center;
+            background-color: rgb(229, 229, 229);
+        }
+
+        a { /* Tirar decoração (sublinhado) */
+            text-decoration: none;
+            color: black;
+        }
+
+        li a:hover { /* Passar o mouse sobre a lista */
+            background-color: rgb(50, 50, 50);
+            color: white;
+        }
+
+        div.text {
+            display: block;
+            width: 80vw;
+            height: 1200px; /* Pode ser ajustado conforme necessário */
+            padding-left: 22vw; /* Usando padding em vez de margin */
+            padding-right: 50px;
+            margin-top: 15px; /* Adiciona espaço acima do conteúdo */
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="barra">
+        <ul>
+            <li><a href="#link">Home</a></li>
+            <li>
+                <a href="#link">Dropdown</a>
+                <div>
+                    <a href="#item">Subitem 1</a>
+                    <a href="#item">Subitem 2</a>
+                    <a href="#item">Subitem 3</a>
+                </div>
+            </li>
+            <li><a href="#link">Foda-se</a></li>
+        </ul>
+    </nav>
+
+    <div class="text">
+        <h2>Fixed Full-height Side Nav</h2>
+        <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+    </div>
+</body>
+</html>

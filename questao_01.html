@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        nav.barra {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            background-color: #dfdfdf;
+        }
+
+        ul {
+            list-style-type: none;  
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            position: relative; /* Necessário para posicionar o dropdown corretamente */
+        }
+
+        li a { /*configuração dos links dentro da lista*/
+            display: block; 
+            padding: 10px; 
+            text-align: center;
+            background-color: rgb(229, 229, 229);
+        }
+
+        a { /*tirar decoração (sublinhado) */
+            text-decoration: none;
+            color: black;
+        }
+
+        li a:hover { /*passar o mouse sobre a lista*/
+            background-color: darkgray;
+            color: black;
+        }
+
+        .dropdown-content { /*configuração dropdown*/
+            width: auto;
+            display: none; /* Oculta o submenu por padrão */
+            position: absolute; /* Permite que o submenu seja posicionado em relação ao li pai */
+            background-color: white; /* Cor de fundo do submenu */
+            border: 1px solid #e7e7e7; /* Borda do submenu */
+            z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+            box-shadow: 5px 5px 5px rgba(162, 161, 161, 0.21);
+        }
+
+        li a:focus + .dropdown-content,
+        li a:hover + .dropdown-content {
+            display: block; /* Mostra o submenu quando o link é focado ou hovered */
+        }
+
+        .dropdown-content a { /*espaçamento entre os links do dropdown*/
+            padding: 10px; 
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: darkgray; /* Efeito hover no submenu */
+        }
+    </style>
+</head>
+<body>
+    <nav class="barra">
+        <ul>
+            <li><a href="#link">Home</a></li>
+            <li>
+                <a href="#link">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#item">Subitem 1</a>
+                    <a href="#item">Subitem 2</a>
+                    <a href="#item">Subitem 3</a>
+                </div>
+            </li>
+            <li><a href="#link">Foda-se</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
